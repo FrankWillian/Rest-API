@@ -19,4 +19,9 @@ router.post('/posts/id', async function(req, res) {
     res.end();
 });
 
+router.delete('/posts/id', async function(req, res) {
+    await postsService.delete(req.params.id);
+    res.end();
+});
+
 module.exports = router;
